@@ -16,9 +16,9 @@ export function Hero() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col-reverse md:flex-row gap-3 items-center py-10 md:py-20 justify-evenly h-full w-full"
+        className="relative flex flex-col-reverse md:flex-row gap-3 items-center py-10 md:py-16 justify-evenly w-full"
       >
-        <div className=" w-[50%] font-bold dark:text-white text-center justify-center h-[450px] flex flex-col relative gap-10 ">
+        <div className=" w-[50%] font-bold dark:text-white text-center justify-evenly h-[400px] md:h-[500px] flex flex-col relative gap-9">
           <p className="text-lg md:text-4xl ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
             temporibus quas perspiciatis. Esse repellat nihil tenetur, molestias
