@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import heroPortrait from "@/assets/hero-portrait-1.png";
+import heroPortrait from "@/public/hero-portrait-1.png";
 
 export function HeroImage() {
   return (

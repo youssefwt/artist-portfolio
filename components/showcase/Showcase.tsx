@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Tabs } from "../ui/tabs";
-import heroPortrait from "@/assets/hero-portrait.png";
+import heroPortrait from "@/public/hero-portrait.png";
 import { PaintingsGallery } from "./Paintings";
-import { Boxes } from "../ui/background-boxes";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
+import { PhotosGallery } from "./Photography";
 //
 export function Showcase() {
   const tabs = [
@@ -18,22 +18,11 @@ export function Showcase() {
       ),
     },
     {
-      title: "Crafts",
-      value: "crafts",
-      content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-custom-gradient ">
-          <p>Crafts</p>
-          <DummyContent />
-        </div>
-      ),
-    },
-    {
       title: "Photography",
       value: "photography",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-custom-gradient">
-          <p>Photography</p>
-          <DummyContent />
+          <PhotosGallery />
         </div>
       ),
     },
@@ -41,10 +30,14 @@ export function Showcase() {
       title: "Lifestyle",
       value: "lifestyle",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-custom-gradient">
-          <p>Lifestyle</p>
-          <DummyContent />
-        </div>
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-custom-gradient"></div>
+      ),
+    },
+    {
+      title: "Crafts",
+      value: "crafts",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-custom-gradient "></div>
       ),
     },
   ];
@@ -60,18 +53,3 @@ export function Showcase() {
     </div>
   );
 }
-
-const DummyContent = () => {
-  return (
-    <>
-      <Image
-        src={heroPortrait}
-        alt="dummy image"
-        width="300"
-        height="300"
-        className="z-50 relative"
-        //   className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
-      />
-    </>
-  );
-};

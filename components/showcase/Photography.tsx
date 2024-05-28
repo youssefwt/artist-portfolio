@@ -3,17 +3,17 @@ import { promises } from "fs";
 import path from "path";
 import MobileGallery from "./MobileGallery";
 
-export async function PaintingsGallery() {
-  const imageDirectory = path.join(process.cwd(), "/public/paintings");
+export async function PhotosGallery() {
+  const imageDirectory = path.join(process.cwd(), "/public/photos");
   const imageFilenames = await promises.readdir(imageDirectory);
-  const paintings = imageFilenames.map((file) => `/paintings/${file}`);
+  const photos = imageFilenames.map((file) => `/photos/${file}`);
   return (
     <>
       <ParallaxScroll
-        images={paintings}
+        images={photos}
         className="w-full p-0 h-full hidden md:block"
       />
-      <MobileGallery images={paintings} />
+      <MobileGallery images={photos} />
     </>
   );
 }
