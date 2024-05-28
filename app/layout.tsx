@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 const dancingScript = Dancing_Script({ subsets: ["latin"], weight: "400" });
 export const metadata: Metadata = {
-  title: "art gallery",
+  title: "Ereny's world",
   description: "gallery for art",
 };
 
