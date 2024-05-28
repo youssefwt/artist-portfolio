@@ -1,6 +1,6 @@
 "use client";
 import { useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { use, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -14,7 +14,8 @@ export const ParallaxScroll = ({
   images: string[];
   className?: string;
 }) => {
-  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(-1);
+
   const gridRef = useRef<any>(null);
   const { scrollYProgress } = useScroll({
     container: gridRef, // remove this if your container is not fixed height
@@ -49,11 +50,14 @@ export const ParallaxScroll = ({
               <motion.div
                 style={{ y: translateFirst }} // Apply the translateY motion value here
                 key={"grid-1" + idx}
+                className="bg-[#28282d] rounded-lg "
               >
                 <Image
-                  onClick={() => setOpen((prev) => !prev)}
+                  onClick={() => {
+                    setIndex(images.findIndex((elm) => elm === el));
+                  }}
                   src={el}
-                  className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 z-50 relative cursor-pointer"
+                  className="h-80 w-full object-contain rounded-lg gap-10 !m-0 !p-0 z-50 relative cursor-pointer"
                   height="400"
                   width="400"
                   alt="thumbnail"
@@ -65,7 +69,9 @@ export const ParallaxScroll = ({
             {secondPart.map((el, idx) => (
               <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
                 <Image
-                  onClick={() => setOpen((prev) => !prev)}
+                  onClick={() => {
+                    setIndex(images.findIndex((elm) => elm === el));
+                  }}
                   src={el}
                   className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 z-50 relative cursor-pointer"
                   height="400"
@@ -79,7 +85,9 @@ export const ParallaxScroll = ({
             {thirdPart.map((el, idx) => (
               <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
                 <Image
-                  onClick={() => setOpen((prev) => !prev)}
+                  onClick={() => {
+                    setIndex(images.findIndex((elm) => elm === el));
+                  }}
                   src={el}
                   className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 z-50 relative cursor-pointer"
                   height="400"
@@ -93,9 +101,10 @@ export const ParallaxScroll = ({
       </div>
       <Lightbox
         plugins={[Thumbnails]}
-        open={open}
-        close={() => setOpen(false)}
-        slides={images.map((url) => ({ src: url }))}
+        open={index >= 0}
+        close={() => setIndex(-1)}
+        index={index}
+        slides={images?.map((url) => ({ src: url }))}
       />
     </>
   );

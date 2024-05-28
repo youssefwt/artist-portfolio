@@ -24,9 +24,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className={cn(dancingScript.className, "dark container mx-auto")}>
-        {children}
-      </body>
+      <body className={cn(dancingScript.className, "dark ")}>{children}</body>
     </html>
   );
 }

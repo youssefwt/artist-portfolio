@@ -1,9 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import { Tabs } from "../ui/tabs";
 import heroPortrait from "@/assets/hero-portrait.png";
-import { PaintingsGallery } from "./Gallery";
+import { PaintingsGallery } from "./Paintings";
 import { Boxes } from "../ui/background-boxes";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
@@ -25,6 +23,16 @@ export function Showcase() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-custom-gradient ">
           <p>Crafts</p>
+          <DummyContent />
+        </div>
+      ),
+    },
+    {
+      title: "Photography",
+      value: "photography",
+      content: (
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-custom-gradient">
+          <p>Photography</p>
           <DummyContent />
         </div>
       ),
