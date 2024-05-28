@@ -5,7 +5,10 @@ const Social = () => {
     <div className="wrapper flex justify-center">
       <ul>
         <li className="facebook">
-          <Link href="#">
+          <Link
+            href="https://www.facebook.com/TheWorldOfErenyFares"
+            target="_blank"
+          >
             <i className="fa fa-facebook fa-2x" aria-hidden="true"></i>
           </Link>
         </li>
@@ -15,7 +18,10 @@ const Social = () => {
           </Link>
         </li> */}
         <li className="instagram">
-          <Link href="#">
+          <Link
+            href="https://www.instagram.com/theworldoferenyfaris?igsh=Mnh4enQ4cmhla3Rm"
+            target="_blank"
+          >
             <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>
           </Link>
         </li>

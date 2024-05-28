@@ -1,13 +1,17 @@
 // "use client";
 
 import { motion } from "framer-motion";
+import { Noto_Serif_JP } from "next/font/google";
+
 import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { HeroImage } from "@/components/hero/HeroImage";
 import Social from "./Social";
+const japanese = Noto_Serif_JP({ subsets: ["latin"], weight: "400" });
+
 export function Hero() {
   return (
-    <AuroraBackground className=" rounded-bl-[100px] h-[90%] ">
+    <AuroraBackground className=" rounded-bl-[100px] h-[90%]">
       <div
         // initial={{ opacity: 0.0, y: 40 }}
         // whileInView={{ opacity: 1, y: 0 }}
@@ -32,6 +36,7 @@ export function Hero() {
           </div>
           <div className="dark:text-white text-center self-center">
             <Social />
+            <p className={`${japanese.className}`}>エジプトのアジア人</p>
           </div>
         </div>
         <HeroImage />
