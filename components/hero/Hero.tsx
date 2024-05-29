@@ -26,11 +26,11 @@ export function Hero() {
           <div className="text-lg md:text-4xl space-y-5">
             <h2 className="md:text-start">Welcome to My Artistic Journey</h2>
             <p>
-              Dive into Ereny's vibrant world of colors and creativity. As an
-              emerging artist, I invite you to explore my evolving portfolio,
+              Dive into Ereny&apos;s vibrant world of colors and creativity. As
+              an emerging artist, I invite you to explore my evolving portfolio,
               where each brushstroke tells a story of passion, discovery, and
               growth. My work is a reflection of my journey as an artist,
-              capturing the essence of life's beauty and complexity through
+              capturing the essence of life&apos;s beauty and complexity through
               various mediums and styles.
             </p>
           </div>

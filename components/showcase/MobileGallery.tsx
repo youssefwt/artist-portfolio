@@ -12,6 +12,7 @@ const MobileGallery = ({ images }: { images: string[] }) => {
       <div className="grid gap-10 md:hidden">
         {images.map((el, idx) => (
           <Image
+            key={el}
             onClick={() => {
               setIndex(images.findIndex((elm) => elm === el));
             }}
