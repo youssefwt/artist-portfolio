@@ -14,6 +14,7 @@ export function HeroImage() {
             className="w-36 md:w-full rounded-full image-filter "
             src={heroPortrait}
             alt="Picture of the author"
+            priority
           />
         </CardItem>
       </CardBody>

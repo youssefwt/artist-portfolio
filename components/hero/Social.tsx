@@ -4,37 +4,37 @@ const Social = () => {
   return (
     <div className="wrapper flex justify-center">
       <ul>
-        <li className="facebook">
-          <Link
-            href="https://www.facebook.com/TheWorldOfErenyFares"
-            target="_blank"
-          >
+        <Link
+          href="https://www.facebook.com/TheWorldOfErenyFares"
+          target="_blank"
+        >
+          <li className="facebook">
             <i className="fa fa-facebook fa-2x" aria-hidden="true"></i>
-          </Link>
-        </li>
+          </li>
+        </Link>
         {/* <li className="twitter">
           <Link href="#">
             <i className="fa fa-twitter fa-2x" aria-hidden="true"></i>
           </Link>
         </li> */}
-        <li className="instagram">
-          <Link
-            href="https://www.instagram.com/theworldoferenyfaris?igsh=Mnh4enQ4cmhla3Rm"
-            target="_blank"
-          >
+        <Link
+          href="https://www.instagram.com/theworldoferenyfaris?igsh=Mnh4enQ4cmhla3Rm"
+          target="_blank"
+        >
+          <li className="instagram">
             <i className="fa fa-instagram fa-2x" aria-hidden="true"></i>
-          </Link>
-        </li>
+          </li>
+        </Link>
         {/* <li className="google">
           <Link href="#">
             <i className="fa fa-google fa-2x" aria-hidden="true"></i>
           </Link>
         </li> */}
-        <li className="whatsapp">
-          <Link href="#">
+        <Link href="#">
+          <li className="whatsapp">
             <i className="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
-          </Link>
-        </li>
+          </li>
+        </Link>
       </ul>
     </div>
   );
